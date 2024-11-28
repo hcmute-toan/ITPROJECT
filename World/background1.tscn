@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://berotbjww4o2e"]
+
+[ext_resource type="Texture2D" uid="uid://bhesqbdnx67t2" path="res://World/game_background_1/layers/sky.png" id="1_vvyfn"]
+[ext_resource type="Texture2D" uid="uid://4e5dmuosu1br" path="res://World/game_background_1/layers/clouds_2.png" id="2_jklve"]
+
+[node name="Background" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
+texture_filter = 1
+offset_left = -363.0
+offset_top = 4.0
+offset_right = 1557.0
+offset_bottom = 1084.0
+scale = Vector2(1.03367, 0.650461)
+texture = ExtResource("1_vvyfn")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+texture_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
+offset_left = 214.0
+offset_top = 288.0
+offset_right = 2134.0
+offset_bottom = 1368.0
+scale = Vector2(0.370278, 0.270432)
+texture = ExtResource("2_jklve")

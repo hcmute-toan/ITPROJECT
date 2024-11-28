@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://xh3ebnoddr4n"]
+
+[ext_resource type="Texture2D" uid="uid://b86ns6ms21bxs" path="res://World/Tile/moving_platform.webp" id="1_k6uum"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fejvw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sn1n"]
+size = Vector2(92.5, 10)
+
+[node name="platform_w3" type="AnimatableBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_fejvw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, 9)
+scale = Vector2(0.521973, 0.699219)
+texture = ExtResource("1_k6uum")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.75, 8)
+shape = SubResource("RectangleShape2D_3sn1n")
+one_way_collision = true

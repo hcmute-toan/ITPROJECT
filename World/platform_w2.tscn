@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpeeuwfbw2tjn"]
+
+[ext_resource type="Texture2D" uid="uid://b86ns6ms21bxs" path="res://World/Tile/moving_platform.webp" id="1_8tucs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjw5j"]
+size = Vector2(47.75, 6.25)
+
+[node name="platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+scale = Vector2(0.304688, 0.34375)
+texture = ExtResource("1_8tucs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.125, -3.125)
+shape = SubResource("RectangleShape2D_bjw5j")
+one_way_collision = true

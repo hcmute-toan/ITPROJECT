@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhhw7qstg8wwc"]
+
+[ext_resource type="Texture2D" uid="uid://28qpl7mksoh7" path="res://World/game_background_2/game_background_2.png" id="1_t8ixg"]
+
+[node name="Background2" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
+offset_left = -166.0
+offset_top = 2.0
+offset_right = 1838.0
+offset_bottom = 1082.0
+scale = Vector2(0.760165, 0.66996)
+texture = ExtResource("1_t8ixg")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
+offset_right = 40.0
+offset_bottom = 40.0

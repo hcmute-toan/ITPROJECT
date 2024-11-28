@@ -1,0 +1,124 @@
+[gd_scene load_steps=4 format=3 uid="uid://ydxni5v1xn2r"]
+
+[ext_resource type="Script" path="res://gameover.gd" id="1_2kuna"]
+[ext_resource type="Texture2D" uid="uid://bhte8gn0u3u0i" path="res://World/game_background_1/game_background_1.png" id="1_33fk4"]
+[ext_resource type="PackedScene" uid="uid://byew66ixeasdj" path="res://gamemanager.tscn" id="3_blxle"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2kuna")
+
+[node name="GameBackground1" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 779.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.597526, 0.597222)
+texture = ExtResource("1_33fk4")
+
+[node name="Title" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.0
+offset_top = -185.5
+offset_right = 159.0
+offset_bottom = -146.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0392157, 0.717647, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "			           GAME OVER"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = 31.0
+offset_right = 139.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RetryButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "RETRY"
+
+[node name="Quitbutton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "QUIT"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = -19.0
+offset_right = 138.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+fit_content = true
+
+[node name="Gamemanager" parent="." instance=ExtResource("3_blxle")]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -77.0
+offset_right = 137.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = -131.0
+offset_right = 138.0
+offset_bottom = -91.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+[connection signal="button_down" from="VBoxContainer/RetryButton" to="." method="_on_retry_button_button_down"]
+[connection signal="button_up" from="VBoxContainer/Quitbutton" to="." method="_on_quitbutton_button_up"]

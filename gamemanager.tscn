@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://byew66ixeasdj"]
+
+[ext_resource type="Script" path="res://script/gamemanager.gd" id="1_45ai7"]
+
+[node name="Gamemanager" type="Node"]
+script = ExtResource("1_45ai7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_top = 118.0
+offset_right = 212.0
+offset_bottom = 158.0
+bbcode_enabled = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer"]
+offset_top = 152.0
+offset_right = 212.0
+offset_bottom = 192.0
+bbcode_enabled = true
